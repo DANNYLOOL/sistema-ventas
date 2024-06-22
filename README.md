@@ -1,4 +1,4 @@
-![image](https://github.com/DANNYLOOL/sistema-ventas/assets/118220814/71be7765-f0c0-4204-87cf-14f78119b9a4)# sistema-ventas
+# sistema-ventas
 Tener un sistema en el cual se pueda realizar una venta de manera automatizada, adenas de tener el control de inventarios (entradas y salidas) y contar con la generación de reportes para su posterior análisis.
 
 ## Versionado
@@ -9,6 +9,6 @@ Usamos [SemVer](https://semver.org) para el versionado. Para todas las versiones
 
   <p align="center">
     <a href="https://github.com/DANNYLOOL">
-      <img src="https://static.vecteezy.com/system/resources/previews/004/688/138/original/ts-logo-letter-design-icon-ts-letters-with-colorful-creative-swoosh-lines-vector.jpg" />
+      <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_ng_service_ts_icon_130312.png" alt="Descripción del logo" width="200" height="200"/>
     </a>
   </p>
