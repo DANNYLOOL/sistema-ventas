@@ -5,7 +5,7 @@ Tener un sistema en el cual se pueda realizar una venta de manera automatizada, 
 Usamos [SemVer](https://semver.org) para el versionado. Para todas las versiones disponibles.
 
 ## Autores -
-  ** Daniel Rangel Paredón - *Developer* - [DANNYLOOL](https://github.com/DANNYLOOL) 
+  * Daniel Rangel Paredón - *Developer* - [DANNYLOOL](https://github.com/DANNYLOOL) 
 
   <p align="center">
     <a href="https://github.com/DANNYLOOL">
