@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -w",
-    "dev" : "nodemon build/index.js"
+    "dev": "nodemon build/index.js",
+    "start": "concurrently --kill-others \"npm run build\" \"npm run dev\""
   },
   "keywords": [],
   "author": "Daniel Rangel Paredón",
@@ -16,6 +17,7 @@
     "cors": "^2.8.5",
     "crypto-js": "^4.2.0",
     "express": "^4.19.2",
+    "express-validator": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "promise-mysql": "^5.2.0",
