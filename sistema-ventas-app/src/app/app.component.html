@@ -1,0 +1,21 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="push">
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header (toggleSidenav)="sidenav.toggle()"></app-header>
+        <router-outlet />
+        <app-footer></app-footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"><p style="color: white" > Cargando </p></ngx-spinner>
+
+<!--
+ng g m pages/home -m=app --route home
+ng g c shared/components/header
+ng g c shared/components/footer
+ng g m pages/notFound -m=app --route notFound
+ng g m pages/admin -m=app --route admin
+ng g m pages/auth/login -m=app --route login
+-->

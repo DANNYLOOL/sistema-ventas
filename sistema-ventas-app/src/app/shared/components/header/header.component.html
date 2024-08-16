@@ -1,0 +1,21 @@
+<mat-toolbar class="header-background" [class.mat-elevation-z1]="true">
+    <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon class="mat-toolbar-content">menu</mat-icon>
+    </button>
+    <span><a class="text-white" routerLink="/home">Sistema de Ventas</a></span>
+    <span class="spacer"></span>
+    <a *ngIf="!isLogged else viewLogOut" mat-flat-button routerLink="/login">Iniciar Sesión</a>
+</mat-toolbar>
+
+<ng-template #viewLogOut>
+    <button mat-button [matMenuTriggerFor]="lista">
+        {{ data.nombre + ' ' + data.apellido }}
+        <mat-icon>expand_more</mat-icon>
+    </button>
+    <mat-menu #lista="matMenu">
+        <button mat-menu-item (click)="onLogout()">
+            <mat-icon>logout</mat-icon>
+            Cerrar Sesión
+        </button>
+    </mat-menu>
+</ng-template>
