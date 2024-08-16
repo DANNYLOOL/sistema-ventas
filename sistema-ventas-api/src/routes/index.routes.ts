@@ -30,18 +30,48 @@ class IndexRoutes {
 
     /**
      * @swagger
-     * /api:
-     *  post:
-     *      tags: ["Index"]
-     *      summary: Default Index
-     *      description: Ruta por defecto de la API.
+     * /api/usuarios:
+     *  get:
+     *      tags: ["Usuarios"]
+     *      summary: Obtener todos los usuarios
+     *      description: Retorna una lista de todos los usuarios de la base de datos.
      *      produces:
      *          - application/json
      *      responses:
      *          200:
      *              description: Exitoso
      */
-    this.router.post('/', indexController.insert);
+    this.router.get('/usuarios', indexController.getUsuarios);
+
+    /**
+     * @swagger
+     * /api/roles:
+     *  get:
+     *    tags: ["Roles"]
+     *    summary: Obtener todos los roles
+     *    description: Retorna una lista de todos los roles de la base de datos.
+     *    produces:
+     *      - application/json
+     *    responses:
+     *      200:
+     *        description: Exitoso
+     */
+    this.router.get('/roles', indexController.getRoles);
+
+    /**
+     * @swagger
+     * /api:
+     *  post:
+     *      tags: ["Usuarios"]
+     *      summary: Crear un nuevo usuario
+     *      description: Crea un nuevo usuario en la base de datos.
+     *      produces:
+     *          - application/json
+     *      responses:
+     *          200:
+     *              description: Exitoso
+     */
+    this.router.post('/usuarios', indexController.insert);
 
     /**
      * @swagger
@@ -56,22 +86,22 @@ class IndexRoutes {
      *          200:
      *              description: Exitoso
      */
-    this.router.put('/', indexController.update);
+    this.router.put('/usuarios/:id', indexController.update);
 
     /**
      * @swagger
      * /api:
      *  delete:
      *      tags: ["Index"]
-     *      summary: Default Index
-     *      description: Ruta por defecto de la API.
+     *      summary: Eliminar un usuario
+     *      description: Elimina un usuario de la base de datos basado en su ID.
      *      produces:
      *          - application/json
      *      responses:
      *          200:
      *              description: Exitoso
      */
-    this.router.delete('/', indexController.delete);
+    this.router.delete('/usuarios/:id', indexController.delete);
   }
 }
 

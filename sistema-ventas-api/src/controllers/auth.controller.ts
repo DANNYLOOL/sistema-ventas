@@ -8,8 +8,11 @@ class AuthController {
 
         try {
 
-            //var temp = await utils.hashPassword("admin");
-            //console.log(temp);
+            // Test
+            //await this.sleep(2000);
+
+            // var temp = await utils.hashPassword("admin");
+            // console.log(temp);
             
             // Obtener los datos del body
             const { username, password } = req.body;
@@ -43,6 +46,12 @@ class AuthController {
             return res.status(500).json({message: "Error interno"});
         }
 
+    }
+
+    sleep(ms: number) {
+        return new Promise( (resolve) => {
+            setTimeout(resolve, ms);
+        });
     }
 
 }
