@@ -6,8 +6,7 @@ import { environment } from '../../../../environments/environment.development';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { isPlatformBrowser } from '@angular/common';
-import { Usuario } from '../../../shared/models/usuario.interface';
-import { Rol } from '../../../shared/models/rol.interface';
+import Swal from 'sweetalert2';
 
 const helper = new JwtHelperService();
 
@@ -33,7 +32,7 @@ export class AuthService {
   }
 
   get tokenValue() {
-    return this.tokenData.getValue();
+    return this.token.getValue();
   }
 
   get tokenData$() {
@@ -110,7 +109,18 @@ export class AuthService {
       else errorMessage = 'Ocurrió un error';
     }
 
-    this.snackBar.open(errorMessage, '', { duration: 3000 });
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: errorMessage,
+      position: 'top-end',
+      toast: true,
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      background: '#f8d7da',
+      color: '#721c24'
+    });
 
     return throwError(() => {
       new Error(errorMessage);

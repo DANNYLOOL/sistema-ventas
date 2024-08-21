@@ -27,8 +27,9 @@ model Usuario {
 }
 
 model Rol {
-  id       Int    @id @default(autoincrement())
-  nombre   String @unique @db.VarChar(50)
+  id       Int       @id @default(autoincrement())
+  nombre   String    @unique @db.VarChar(50)
+  activo   Int       @default(1)
   usuarios Usuario[] @relation("UserRoles")
 
   @@map("tbl_rol")
