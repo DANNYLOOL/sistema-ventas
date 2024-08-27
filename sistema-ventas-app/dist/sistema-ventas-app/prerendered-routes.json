@@ -1,9 +1,0 @@
-{
-  "routes": [
-    "/admin",
-    "/admin/usuarios",
-    "/home",
-    "/login",
-    "/notFound"
-  ]
-}
